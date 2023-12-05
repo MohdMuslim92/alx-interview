@@ -37,4 +37,9 @@ def canUnlockAll(boxes):
             visited.add(box)
             keys.extend(boxes[box])
 
+    # Check if all required boxes are visited
+    for box in range(len(boxes)):
+        if box not in visited and boxes[box]:
+            return False
+
     return len(visited) == len(boxes)
