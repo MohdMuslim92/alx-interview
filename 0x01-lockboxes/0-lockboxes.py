@@ -35,11 +35,9 @@ def canUnlockAll(boxes):
         box = keys.pop()
         if box not in visited:
             visited.add(box)
-            keys.extend(boxes[box])
+            for key in boxes[box]:
+                if key not in visited:  # Only add unvisited keys to the stack
+                    keys.append(key)
 
-    # Check if all required boxes are visited
-    for box in range(len(boxes)):
-        if box not in visited and boxes[box]:
-            return False
-
+    # Check if all boxes were visited
     return len(visited) == len(boxes)
