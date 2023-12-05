@@ -28,14 +28,18 @@ def canUnlockAll(boxes):
     if not boxes or len(boxes) == 0:
         return False
 
-    def dfs(box, visited):
-        if box in visited:
-            return
-        visited.add(box)
-        for key in boxes[box]:
-            dfs(key, visited)
+    keys = [0]  # Start with the keys from box 0
+    visited = set()  # To keep track of visited boxes
 
-    visited = set()
-    dfs(0, visited)
+    while keys:
+        box = keys.pop()
+        if box not in visited:
+            visited.add(box)
+            keys.extend(boxes[box])
+
+    # Check if all required boxes are visited
+    for box in range(len(boxes)):
+        if box not in visited and boxes[box]:
+            return False
 
     return len(visited) == len(boxes)
