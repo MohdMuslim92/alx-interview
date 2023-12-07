@@ -29,17 +29,13 @@ def canUnlockAll(boxes):
         return False
 
     keys = [0]  # Start with the keys from box 0
-    visited = set()  # To keep track of visited boxes
+    visited = {0}  # To keep track of visited boxes
 
     while keys:
         box = keys.pop()
-        if box not in visited:
-            visited.add(box)
-            keys.extend(boxes[box])
-
-    # Check if all required boxes are visited
-    for box in range(len(boxes)):
-        if box not in visited and boxes[box]:
-            return False
+        for key in boxes[box]:
+            if key not in visited and key < len(boxes):
+                visited.add(key)
+                keys.append(key)
 
     return len(visited) == len(boxes)
