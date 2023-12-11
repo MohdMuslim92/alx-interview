@@ -23,6 +23,14 @@ The `alx-interview` repository is structured into directories, each focusing on 
   - `main_0.py`: Example usage demonstrating the functionality of `canUnlockAll`.
   - `README.md`: Description and usage guide for the `canUnlockAll` function.
 
+### 0x02-minimum_operations
+
+- **Overview**: Calculates the minimum number of operations needed to achieve a specific number of characters using "Copy All" and "Paste" operations in a text file.
+- **Contents**:
+  - `0-minoperations.py`: Python script implementing dynamic programming for minimum operations.
+  - `0-main.py`: Example usage testing the `minOperations` function.
+  - `README.md`: Description and usage guide for the `minOperations` function.
+
 
 ## Usage
 
