@@ -6,6 +6,7 @@ based on the specified log format.
 
 import sys
 from collections import defaultdict
+import re
 
 
 def parse_line(line):
@@ -19,16 +20,13 @@ def parse_line(line):
     tuple: A tuple containing the status code and file size if the line matches
     the expected format, otherwise (None, None).
     """
-    parts = line.split()
-    if len(parts) >= 9:
-        status_code = parts[-2]
-        try:
-            status_code = int(status_code)
-            if status_code in {200, 301, 400, 401, 403, 404, 405, 500}:
-                file_size = int(parts[-1])
-                return status_code, file_size
-        except ValueError:
-            pass
+    pattern = (
+        r'^([\d.]+)\s+-\s+\[([^\]]+)\]\s+"(?:GET|POST)\s+.*?"'
+        r'\s+(\d+)\s+(\d+)'
+    )
+    match = re.match(pattern, line)
+    if match:
+        return int(match.group(3)), int(match.group(4))
     return None, None
 
 
@@ -42,7 +40,8 @@ def print_statistics(total_size, status_counts):
     """
     print(f'File size: {total_size}')
     for code in sorted(status_counts.keys()):
-        print(f'{code}: {status_counts[code]}')
+        if status_counts[code] > 0:
+            print(f'{code}: {status_counts[code]}')
 
 
 def main():
@@ -60,7 +59,7 @@ def main():
             if status_code is not None and file_size is not None:
                 lines_processed += 1
                 total_size += file_size
-                status_counts[status_code] += 1
+                status_counts[str(status_code)] += 1
 
                 if lines_processed % 10 == 0:
                     print_statistics(total_size, status_counts)
