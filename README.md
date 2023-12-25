@@ -31,6 +31,13 @@ The `alx-interview` repository is structured into directories, each focusing on 
   - `0-main.py`: Example usage testing the `minOperations` function.
   - `README.md`: Description and usage guide for the `minOperations` function.
 
+### 0x03-log_parsing
+
+- **Overview**: Script that reads logs from stdin and computes metrics based on specified input format.
+- **Contents**:
+  - `0-stats.py`: Python script processing log lines to calculate various metrics.
+  - `0-generator.py`: Python script generating sample log lines for testing `0-stats.py`.
+  - `README.md`: Description and usage guide for log parsing script.
 
 ## Usage
 
