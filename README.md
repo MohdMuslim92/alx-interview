@@ -39,6 +39,14 @@ The `alx-interview` repository is structured into directories, each focusing on 
   - `0-generator.py`: Python script generating sample log lines for testing `0-stats.py`.
   - `README.md`: Description and usage guide for log parsing script.
 
+### 0x04-UTF-8_Validation
+
+- **Overview**: Method to determine if a given dataset represents a valid UTF-8 encoding.
+- **Contents**:
+  - `0-validate_utf8.py`: Python script containing the `validUTF8` function.
+  - `0-main.py`: Example usage testing the `validUTF8` function.
+  - `README.md`: Description and usage guide for the `validUTF8` function.
+
 ## Usage
 
 Clone this repository to access the directories and explore each directory's contents. For instance:
