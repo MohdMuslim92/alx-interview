@@ -47,6 +47,20 @@ The `alx-interview` repository is structured into directories, each focusing on 
   - `0-main.py`: Example usage testing the `validUTF8` function.
   - `README.md`: Description and usage guide for the `validUTF8` function.
 
+### 0x05-N_Queens
+
+- **Overview**: Program to solve the N queens puzzle, placing non-attacking queens on an N×N chessboard.
+- **Contents**:
+  - `0-nqueens.py`: Python script solving the N queens puzzle.
+  - `README.md`: Description and usage guide for the N Queens program.
+
+### 0x06-Star_Wars_API_Script
+
+- **Overview**: Script to print all characters of a Star Wars movie using the Star Wars API.
+- **Contents**:
+  - `0-starwars_characters.js`: JavaScript script utilizing the request module to retrieve and print characters.
+  - `README.md`: Description and usage guide for the Star Wars API script.
+
 ## Usage
 
 Clone this repository to access the directories and explore each directory's contents. For instance:
