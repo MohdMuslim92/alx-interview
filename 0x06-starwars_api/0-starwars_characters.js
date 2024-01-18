@@ -22,21 +22,29 @@ request(apiUrl, (error, response, body) => {
 
   const movieData = JSON.parse(body);
   const characters = movieData.characters;
+  async function getCharacterData (characterUrl) {
+    return new Promise((resolve, reject) => {
+      request(characterUrl, (error, response, body) => {
+        if (error) {
+          reject(error);
+        } else if (response.statusCode !== 200) {
+          reject(`Failed to retrieve character information. Status Code: ${response.statusCode}`);
+        } else {
+          resolve(JSON.parse(body));
+        }
+      });
+    });
+  }
 
-  characters.forEach((characterUrl) => {
-    request(characterUrl, (error, response, body) => {
-      if (error) {
+  (async function printCharacters () {
+    for (const characterUrl of characters) {
+      try {
+        const characterData = await getCharacterData(characterUrl);
+        console.log(characterData.name);
+      } catch (error) {
         console.error('Error:', error);
         process.exit(1);
       }
-
-      if (response.statusCode !== 200) {
-        console.error('Failed to retrieve character information. Status Code:', response.statusCode);
-        process.exit(1);
-      }
-
-      const characterData = JSON.parse(body);
-      console.log(characterData.name);
-    });
-  });
+    }
+  })();
 });
