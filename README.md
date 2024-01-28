@@ -61,6 +61,14 @@ The `alx-interview` repository is structured into directories, each focusing on 
   - `0-starwars_characters.js`: JavaScript script utilizing the request module to retrieve and print characters.
   - `README.md`: Description and usage guide for the Star Wars API script.
 
+### 0x07-Rotate_2D_Matrix
+
+- **Overview**: Python function to rotate an n x n 2D matrix 90 degrees clockwise.
+- **Contents**:
+  - `0-rotate_2d_matrix.py`: Python script containing the `rotate_2d_matrix` function.
+  - `main_0.py`: Example usage testing the `rotate_2d_matrix` function.
+  - `README.md`: Description and usage guide for the `rotate_2d_matrix` function.
+
 ## Usage
 
 Clone this repository to access the directories and explore each directory's contents. For instance:
