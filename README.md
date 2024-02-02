@@ -69,6 +69,14 @@ The `alx-interview` repository is structured into directories, each focusing on 
   - `main_0.py`: Example usage testing the `rotate_2d_matrix` function.
   - `README.md`: Description and usage guide for the `rotate_2d_matrix` function.
 
+### 0x08-Making_Change
+
+- **Overview**: Function to determine the fewest number of coins needed to meet a given total.
+- **Contents**:
+  - `0-making_change.py`: Python script containing the `makeChange` function.
+  - `0-main.py`: Example usage testing the `makeChange` function.
+  - `README.md`: Description and usage guide for the `makeChange` function.
+
 ## Usage
 
 Clone this repository to access the directories and explore each directory's contents. For instance:
