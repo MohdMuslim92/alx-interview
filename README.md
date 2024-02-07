@@ -77,6 +77,14 @@ The `alx-interview` repository is structured into directories, each focusing on 
   - `0-main.py`: Example usage testing the `makeChange` function.
   - `README.md`: Description and usage guide for the `makeChange` function.
 
+### 0x09-Island_Perimeter
+
+- **Overview**: Function to calculate the perimeter of an island described in a grid.
+- **Contents**:
+  - `0-island_perimeter.py`: Python script containing the `island_perimeter` function.
+  - `0-main.py`: Example usage testing the `island_perimeter` function.
+  - `README.md`: Description and usage guide for the `island_perimeter` function.
+
 ## Usage
 
 Clone this repository to access the directories and explore each directory's contents. For instance:
