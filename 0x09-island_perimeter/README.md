@@ -23,7 +23,7 @@ To test the `island_perimeter` function:
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/your-username/alx-interview.git
+    git clone https://github.com/mohdmuslim92/alx-interview.git
     ```
 
 2. Navigate to the `0x09-island_perimeter` directory:
