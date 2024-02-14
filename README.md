@@ -85,6 +85,14 @@ The `alx-interview` repository is structured into directories, each focusing on 
   - `0-main.py`: Example usage testing the `island_perimeter` function.
   - `README.md`: Description and usage guide for the `island_perimeter` function.
 
+### 0x0A-Prime_Game
+
+- **Overview**: Determines the winner of a game where players choose prime numbers from a set of consecutive integers.
+- **Contents**:
+  - `0-prime_game.py`: Python script containing the `isWinner` function.
+  - `main_0.py`: Example usage testing the `isWinner` function.
+  - `README.md`: Description and usage guide for the `isWinner` function.
+
 ## Usage
 
 Clone this repository to access the directories and explore each directory's contents. For instance:
